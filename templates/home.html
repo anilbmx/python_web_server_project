@@ -13,22 +13,32 @@
     <div class="row d-flex justify-content-center">
       <!-- Default form -->
       <div class="col-4">
-        <form class="text-center border border-light p-5">
+        <form id="form1" class="text-center border border-light p-5" onsubmit="TranslateApi(event)">
 
             <p class="h4 mb-4">Translater</p>
 
-            <input type="text" id="ttext" class="form-control mb-4" placeholder="Enter text">
+            <input type="text" id="ttext" name="inptxt" class="form-control mb-4" placeholder="Enter text">
 
-            <!-- Message -->
-            <div class="form-group">
-                <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="translated text"></textarea>
-            </div>
             <!-- Send button -->
-            <button class="btn btn-info btn-block" type="submit">translate</button>
+            <button class="btn btn-info btn-block" id="submit" type="submit">translate</button>
 
         </form>
         <!-- Default form-->
+        <!-- Message -->
+        <div class="form-group">
+            <textarea class="form-control rounded-0" name="optxt" id="optxt" rows="3" placeholder="translated text"></textarea>
+        </div>
       </div>
+
+    </div>
+    <div class="row">
+      <form onsubmit="employees_detls(event)">
+        <button class="btn btn-primary" type=submit>Get Employee details</button>
+      </form>
+      <div class="col-12">
+          <p id="eoutput"  style="height:auto;width:100%">
+            hellow
+          </p>
     </div>
   </body>
 
@@ -40,5 +50,6 @@
   <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="static/js/mdb.min.js"></script>
+  <script type="text/javascript" src="static/js/app.js"></script>
 
 </html>
